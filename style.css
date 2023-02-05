@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+}
+
+:root {
+  --font1: "Red Hat Display", sans-serif;
+
+  --primaryColor1: hsl(225, 100%, 94%);
+  --primaryColor2: hsl(245, 75%, 52%);
+
+  --verypaleblue: hsl(225, 100%, 98%);
+  --Desaturatedblue: hsl(224, 23%, 55%);
+  --Darkblue: hsl(223, 47%, 23%);
+
+  --fontSizeP: 18px;
+
+  --fw1: 500;
+  --fw2: 700;
+  --fw3: 900;
+}
+
+body {
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font1);
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  padding: 0;
+  max-width: 500px;
+    height: 700px;
+  background-color: white;
+  margin: auto;
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 1px 6px 105px -8px rgba(0, 0, 0, 0.51);
+  -webkit-box-shadow: 1px 6px 105px -8px rgba(0, 0, 0, 0.51);
+  -moz-box-shadow: 1px 6px 105px -8px rgba(0, 0, 0, 0.51);
+}
+
+.header {
+  background-image: url(/images/illustration-hero.svg);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  height: 200px;
+}
+
+.order-summary h1 {
+  font-size: 2.2em;
+}
+
+.order-summary p {
+  font-size: var(--fontSizeP);
+  color: var(--Darkblue);
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.order-plan {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  background-color: var(--verypaleblue);
+  width: 400px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 2em;
+  
+}
+
+.icon-box {
+  background-image: url(/images/icon-music.svg);
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+}
+
+.music-icon {
+}
+
+.details {
+  line-height: 5px;
+}
+
+.details p {
+  font-size: 14px;
+  color: var(--Darkblue);
+}
+
+.change {
+  margin-left: auto;
+
+  cursor: pointer;
+}
+
+.change h4 {
+  color: var(--primaryColor2);
+  text-decoration: underline;
+}
+
+.payment
+{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+}
+
+.payment > *
+{
+    margin: 0 40px 20px 40px;
+}
+
+.paymentBtn
+{
+    background: var(--primaryColor2);
+    border: none;
+    border-radius: .5em;
+    color: white;
+    height: 45px;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    font-size: 1.1em;
+    cursor: pointer;
+    
+}
+
+.cancelBtn
+{
+    background: none;
+    border: none;
+    color: var(--Desaturatedblue);
+    font-size: 1em;
+    cursor: pointer;
+}
+
+@media (max-width: 600px)
+{
+    .container
+    {
+       
+        max-width: 450px;
+        height: 660px;
+    }
+
+    .header
+    {
+        height: 200px;
+    }
+}
